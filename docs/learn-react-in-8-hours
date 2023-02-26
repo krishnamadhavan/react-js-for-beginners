@@ -1,0 +1,19 @@
+# learn-react-in-8-hours
+
+### To create a basic ReactJs boilerplate in the current directory, run the command
+
+```
+npx create-react-app .
+```
+
+### To start the application, run the command
+
+```
+npm start
+```
+
+### How React DOM works:
+
+- What react basically does is this: We have a `div` with `id=root` in `public/index.html`. 
+- We bind a component called `App` from `src/index.js` by finding the `id=root`.
+- The `App` component declared in `src/App.js` is the core of everything you see in the web page.
