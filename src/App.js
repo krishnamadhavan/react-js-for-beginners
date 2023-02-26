@@ -1,9 +1,13 @@
 import './App.css';
 
 function App() {
+  const isGreen = true;
+  const showInfo = true;
+
   return (
     <div className="App">
-      <User name="Krishna Madhavan" designation="Senior Full Stack Developer" experience={3} />
+      <h1 style={{color: isGreen ? "green": "red"}}>My Professional Info</h1>
+      {showInfo && <User name="Krishna Madhavan" designation="Senior Full Stack Developer" experience={3} />}
     </div>
   );
 }
