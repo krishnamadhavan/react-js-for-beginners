@@ -1,5 +1,6 @@
 import './App.css';
-import {User} from './User';
+import { User } from './User';
+import { useState } from 'react';
 
 
 function App() {
@@ -19,6 +20,11 @@ function App() {
       "enabled": true
     },
   ];
+  const [inputValue, setInputValue] = useState("");
+
+  const handleInputChange = (event) => {
+    setInputValue(event.target.value);
+  }
 
   return (
     <div className="App">
@@ -30,6 +36,10 @@ function App() {
             <User key={key} name={user.name} designation={user.designation} experience={user.experience} />
         })
       }
+
+      <h1>Show me what I type!</h1>
+      <p>{inputValue}</p>
+      <input type="text" onChange={handleInputChange}></input>
     </div>
   );
 }
